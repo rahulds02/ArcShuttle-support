@@ -1,0 +1,78 @@
+/* ArcShuttle support site — brand colours from lib/core/theme/app_colors.dart.
+   System fonts only: a privacy page shouldn't load third-party font CDNs. */
+:root {
+  --green-deep: #0a6b4a;
+  --green-bright: #0e8352;
+  --lime: #c6f432;
+  --ink: #17201c;
+  --muted: #4d5a54;
+  --bg: #f6f7f3;
+  --card: #ffffff;
+  --line: #dfe6e1;
+  --link: #0b7a55;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e2e8e4;
+    --muted: #a9b5ae;
+    --bg: #0f1412;
+    --card: #1b2420;
+    --line: #2a3530;
+    --link: #5fd39a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+a { color: var(--link); }
+.hero {
+  background: linear-gradient(135deg, var(--green-deep), var(--green-bright));
+  color: #fff;
+  padding: 40px 0 36px;
+}
+.hero a { color: #fff; }
+.brand {
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--lime);
+  text-decoration: none;
+}
+.hero h1 { margin: 8px 0 8px; font-size: 34px; line-height: 1.15; }
+.lede { margin: 0; font-size: 18px; color: #d9f2e6; }
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--lime);
+  color: #1b2a10 !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+main { padding-top: 12px; padding-bottom: 24px; }
+h2 { margin-top: 32px; font-size: 22px; }
+.meta { color: var(--muted); font-size: 15px; }
+details {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin: 10px 0;
+}
+summary { cursor: pointer; font-weight: 600; }
+details p { margin-bottom: 4px; }
+.footer {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  padding-bottom: 32px;
+  color: var(--muted);
+  font-size: 15px;
+}
